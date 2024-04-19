@@ -1,13 +1,8 @@
-import math
-N = int(input('Введите натуральное число,которое является наиб-им кол-ом точек на всех костях домино:'))
-'''
-a = 0
-for i in range(N):
-    a += math.factorial(N) // (math.factorial(i)*math.factorial(N - i))
-    b = a*2
-print(b)
-'''
+N = int(input("Введите наибольшее количество точек на одной плитке кости домино: "))
+summa = 0
 
-a = math.factorial(N+1)
-b = a*2
-print(b)
+for i in range(N+1):
+    for j in range(i+1):
+        summa += i + j
+
+print("Суммарное количество точек на всех костях домино:", summa)
